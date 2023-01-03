@@ -11,4 +11,5 @@
     <string name="plus">+</string>
     <string name="add_to_cart">Add to cart</string>
     <string name="quantity_value">0</string>
+    <string name="dollar">$</string>
 </resources>
