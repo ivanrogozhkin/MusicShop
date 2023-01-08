@@ -4,5 +4,6 @@ class Order {
     var userName: String = ""
     var goodsTitle: String = ""
     var quantity: Int = 0
+    var price: Int = 0
     var orderPrice: Int = 0
 }

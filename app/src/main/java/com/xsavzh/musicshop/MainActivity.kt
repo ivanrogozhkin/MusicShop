@@ -64,13 +64,18 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         binding.addToCartButton.setOnClickListener {
             val order = Order()
 
-            order.userName = binding.nameEditText.toString()
+            order.userName = binding.nameEditText.text.toString()
             order.goodsTitle = goodsTitle
             order.quantity = quantity
+            order.price = price
             order.orderPrice = quantity*price
 
             val orderIntent = Intent(this, OrderActivity::class.java)
             orderIntent.putExtra("userName", order.userName)
+            orderIntent.putExtra("goodsTitle", order.goodsTitle)
+            orderIntent.putExtra("quantity", order.quantity)
+            orderIntent.putExtra("price", order.price)
+            orderIntent.putExtra("orderPrice", order.orderPrice)
             startActivity(orderIntent)
         }
     }
